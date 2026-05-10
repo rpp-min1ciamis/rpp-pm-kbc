@@ -270,14 +270,20 @@ export default function DashboardPage() {
                 className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               >
                 <option value="">-- Pilih Mapel --</option>
+                <option>Al-Qur&#39;an Hadits</option>
+                <option>Akidah Akhlak</option>
+                <option>Fiqih</option>
+                <option>Sejarah Kebudayaan Islam</option>
+                <option>Pendidikan Pancasila</option>
                 <option>Bahasa Indonesia</option>
-                <option>Matematika</option>
-                <option>IPA</option>
-                <option>IPS</option>
-                <option>PAI / Akidah Akhlak</option>
                 <option>Bahasa Arab</option>
+                <option>Matematika</option>
+                <option>IPAS</option>
                 <option>Seni Budaya</option>
                 <option>PJOK</option>
+                <option>Bahasa Inggris</option>
+                <option>Bahasa Sunda</option>
+                <option>Koding AI</option>
               </select>
             </div>
             <div>
