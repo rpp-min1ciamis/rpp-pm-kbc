@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: #eef2f7;
+  }
+}
+
+/* RPP printable document styling */
+.doc {
+  font-family: "Times New Roman", Georgia, serif;
+  color: #0f172a;
+}
+.doc h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.doc h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+.doc h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+.doc h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+.doc p {
+  margin: 0.25rem 0 0.5rem;
+  text-align: justify;
+}
+.doc ul,
+.doc ol {
+  margin: 0.25rem 0 0.6rem 1.25rem;
+  padding-left: 1rem;
+}
+.doc ul {
+  list-style: disc;
+}
+.doc ol {
+  list-style: decimal;
+}
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 0.92rem;
+}
+.doc th,
+.doc td {
+  border: 1px solid #334155;
+  padding: 6px 8px;
+  vertical-align: top;
+  text-align: left;
+}
+.doc th {
+  background: #f1f5f9;
+}
+.doc .muted {
+  color: #475569;
+  font-size: 0.85em;
+}
+.doc .center {
+  text-align: center;
+}
+.doc .sig {
+  margin-top: 2.5rem;
+}
+.doc .sig table,
+.doc .sig th,
+.doc .sig td {
+  border: 0;
+}
+.doc .pb-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 0.92rem;
+}
+.doc .pb-table th,
+.doc .pb-table td {
+  border: 1px solid #334155;
+  padding: 6px 8px;
+  vertical-align: top;
+  text-align: left;
+}
+.doc .pb-table th {
+  background: #f1f5f9;
+  text-align: center;
+}
+.doc .pb-table ol {
+  margin: 4px 0 4px 16px;
+}
+.doc .pb-table ol li {
+  margin-bottom: 4px;
+  text-align: justify;
+}
+.doc .kbc-box {
+  margin: 8px 0;
+  padding: 6px 10px;
+  border-left: 3px solid #10b981;
+  background: #ecfdf5;
+  font-size: 0.9em;
+  color: #065f46;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .doc {
+    color: #000;
+  }
+  .doc h2 {
+    border-color: #000;
+  }
+  .doc th,
+  .doc td {
+    border-color: #000 !important;
+  }
+}
