@@ -33,25 +33,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <p className="text-[11px] text-slate-500">Pembelajaran Mendalam · Kurikulum Berbasis Cinta</p>
               </div>
             </Link>
-            <nav className="flex items-center gap-1 sm:gap-2">
-              <Link
-                href="/wizard"
-                className="hidden rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 sm:inline-block"
-              >
-                Generator
-              </Link>
-              <Link
-                href="/riwayat"
-                className="hidden rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 sm:inline-block"
-              >
-                Riwayat
-              </Link>
-              <Link
-                href="/wizard"
-                className="rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 sm:px-4"
-              >
-                Buat RPP
-              </Link>
+            <nav className="hidden items-center gap-1 sm:gap-2">
+              {/* Removed buttons as requested */}
             </nav>
           </div>
         </header>
