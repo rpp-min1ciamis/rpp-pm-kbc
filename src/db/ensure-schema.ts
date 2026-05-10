@@ -1,4 +1,5 @@
-import { pool } from "./index";
+import { db } from "./index";
+import { sql } from "drizzle-orm";
 
 const CREATE_SQL = `
 CREATE TABLE IF NOT EXISTS "rpps" (
@@ -31,7 +32,7 @@ export function ensureSchema(): Promise<void> {
   if (ensurePromise) return ensurePromise;
   ensurePromise = (async () => {
     try {
-      await pool.query(CREATE_SQL);
+      await db.execute(sql.raw(CREATE_SQL));
     } catch (err) {
       // Reset so we can retry on next request if it failed
       ensurePromise = null;
