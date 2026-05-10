@@ -75,9 +75,9 @@ export default function DashboardLayout({
   }
 
   const tabs = [
+    { href: "/pengaturan", label: "Pengaturan", icon: "gear" },
     { href: "/dashboard", label: "Buat RPP Baru", icon: "plus" },
     { href: "/riwayat", label: "Penyimpanan RPP", icon: "folder" },
-    { href: "/pengaturan", label: "Pengaturan", icon: "gear" },
   ];
 
   function handleLogout() {
