@@ -304,9 +304,8 @@ export default function PengaturanPage() {
           </div>
         </div>
 
-        {/* Save */}
-        <div className="flex items-center justify-between">
-          <p />
+        {/* Save & Lanjut */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <button
             onClick={handleSave}
             className={`px-6 py-3 rounded-xl text-sm font-bold shadow-md flex items-center gap-2 transition ${
@@ -330,6 +329,19 @@ export default function PengaturanPage() {
                 Simpan Pengaturan
               </>
             )}
+          </button>
+
+          <button
+            onClick={() => {
+              handleSave();
+              setTimeout(() => router.push("/dashboard"), 300);
+            }}
+            className="px-6 py-3 rounded-xl text-sm font-bold shadow-md flex items-center gap-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700 transition"
+          >
+            Simpan & Lanjut ke Buat RPP
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </button>
         </div>
       </div>
