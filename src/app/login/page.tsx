@@ -14,21 +14,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [logo, setLogo] = useState<string>("");
-  const [namaMadrasah, setNamaMadrasah] = useState<string>("MIN 1 CIAMIS");
-
-  useEffect(() => {
-    const stored = localStorage.getItem("rpp-settings");
-    if (stored) {
-      try {
-        const s = JSON.parse(stored);
-        if (s.logo) setLogo(s.logo);
-        if (s.namaMadrasah) setNamaMadrasah(s.namaMadrasah);
-      } catch {
-        // ignore
-      }
-    }
-  }, []);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -52,9 +37,8 @@ export default function LoginPage() {
       <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-br from-teal-800 via-blue-800 to-blue-900 px-8 py-10 text-center">
-          {/* Logos */}
-          <div className="flex items-center justify-center gap-4 mb-6">
-            {/* Logo Kemenag */}
+          {/* Logo Kemenag saja */}
+          <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20 overflow-hidden p-1.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -63,14 +47,6 @@ export default function LoginPage() {
                 className="max-w-full max-h-full object-contain"
               />
             </div>
-
-            {/* Logo Madrasah (custom upload, jika ada) */}
-            {logo && (
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center border border-white/20 overflow-hidden p-1">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={logo} alt="Logo Madrasah" className="max-w-full max-h-full object-contain" />
-              </div>
-            )}
           </div>
 
           <h1 className="text-white text-xl sm:text-2xl font-extrabold tracking-tight leading-tight">
